@@ -26,9 +26,9 @@
 				<version>3.0.0</version>
 			</plugin>			
 			<plugin>
-  <groupId>org.mule.tools.maven</groupId>
-  <artifactId>mule-maven-plugin</artifactId>
-  <version>3.4.2</version>
+	<groupId>org.mule.tools.maven</groupId>
+	<artifactId>mule-maven-plugin</artifactId>
+	<version>3.4.2</version>
   <extensions>true</extensions>
   <configuration>
     <cloudHubDeployment>
@@ -48,7 +48,6 @@
 </plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
