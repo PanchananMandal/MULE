@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<configuration-properties doc:name="Configuration properties" doc:id="619f19d9-915b-4321-969e-9493819f0f1c" file="config.yaml" />
 	<flow name="cloud-deployFlow" doc:id="9540d436-c839-482d-8cc9-4529e6ead0b7" >
 		<http:listener doc:name="Listener" doc:id="88e50224-392f-4234-b07b-93b49b0bf53b" config-ref="HTTP_Listener_config" path="/test"/>
-		<set-payload value="Hello World" doc:name="Set Payload" doc:id="9233dc2a-13f8-4972-abad-d62e07223b73" />
+		<set-payload value="Hello Binayok" doc:name="Set Payload" doc:id="9233dc2a-13f8-4972-abad-d62e07223b73" />
 		<logger level="INFO" doc:name="Logger" doc:id="823e1875-361f-49d8-83a5-64bdf20d24fd" message="#[payload]"/>
 	</flow>
 </mule>
