@@ -39,7 +39,7 @@
 						      <username>pmandal-mule-training2</username>
 						      <password>Edinburgh@1</password>
 						      <environment>Sandbox</environment>
-						      <objectStoreV2>true</objectStoreV2>
+						      
 						      <properties>
 						  		<http.port>8081</http.port>
 								</properties>
