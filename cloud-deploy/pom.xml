@@ -37,7 +37,8 @@
       <password>Edinburgh@1</password>
       <applicationName>cloud-deploy</applicationName>
       <environment>Sandbox</environment>
-      <workers>1</workers>
+      <workers>1</workers>     
+	 <objectStoreV2>true</objectStoreV2>       
       <workerType>MICRO</workerType>
       <properties>
   		<http.port>8081</http.port>
