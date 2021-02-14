@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>cloud-deploy</artifactId>
+	<artifactId>runtime-manager-deployment</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 
-	<name>cloud-deploy</name>
+	<name>runtime-manager-deployment</name>
 
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,28 +24,27 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.0.0</version>
-			</plugin>			
+			</plugin>
 			<plugin>
-  <groupId>org.mule.tools.maven</groupId>
-  <artifactId>mule-maven-plugin</artifactId>
-  <version>3.4.2</version>
-  <extensions>true</extensions>
-  <configuration>
-    <cloudHubDeployment>
-      <uri>https://anypoint.mulesoft.com</uri>
-      <muleVersion>4.3.0</muleVersion>
-      <username>pmandal-mule-training2</username>
-      <password>Edinburgh@1</password>
-      <applicationName>cloud-deploy</applicationName>
-      <environment>Sandbox</environment>
-      <workers>1</workers>
-      <workerType>MICRO</workerType>
-      <properties>
-  		<http.port>8081</http.port>
-	</properties>
-    </cloudHubDeployment>
-  </configuration>
-</plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+						<armDeployment>
+						      <muleVersion>4.3.0</muleVersion>
+						      <uri>https://anypoint.mulesoft.com</uri>
+						      <target>mule-2-4.3.0</target>
+						      <targetType>server</targetType>
+						      <username>pmandal-mule-training2</username>
+						      <password>Edinburgh@1</password>
+						      <environment>Sandbox</environment>
+						      <properties>
+						  		<http.port>8081</http.port>
+								</properties>
+		    			</armDeployment>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -61,31 +61,7 @@
             <version>1.2.0</version>
             <classifier>mule-plugin</classifier>
         </dependency>
-		<dependency>
-            <groupId>org.mule.connectors</groupId>
-            <artifactId>mule-file-connector</artifactId>
-            <version>1.3.4</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
-    	<dependency>
-            <groupId>com.mulesoft.connectors</groupId>
-            <artifactId>anypoint-mq-connector</artifactId>
-            <version>3.1.2</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
-    	<dependency>
-            <groupId>com.mulesoft.connectors</groupId>
-            <artifactId>mule-ibm-mq-connector</artifactId>
-            <version>1.6.3</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
-    	<dependency>
-            <groupId>org.mule.connectors</groupId>
-            <artifactId>mule-jms-connector</artifactId>
-            <version>1.7.3</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
-    </dependencies>
+	</dependencies>
 
 	<repositories>
           <repository>
